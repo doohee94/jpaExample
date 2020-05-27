@@ -1,8 +1,7 @@
 package com.example.demo.ch2.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -10,7 +9,8 @@ import java.util.List;
 
 @Entity
 @Table(name = "TEAM")
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Team {
@@ -22,6 +22,7 @@ public class Team {
     private String name;
 
     @OneToMany(mappedBy = "team")
+    @JsonManagedReference
     private List<Member> members = new ArrayList<>();
 
     public Team(String id, String name) {

@@ -22,4 +22,19 @@ public class Ch10Controller {
     public void criteriaFindSimple(){
         ch10Service.critreiaFindSimple();
     }
+
+    @GetMapping(value = "jpql-find-projection")
+    public void jpqlFindProjection(){
+        ch10Service.jpqlFindProjection();
+    }
+    @GetMapping(value = "join")
+    public void join(){
+        ch10Service.join();
+    }
+
+    @GetMapping(value = "queryDSL")
+    public void queryDSL(){
+        ch10Service.queryDSL();
+    }
+
 }

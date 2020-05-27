@@ -8,16 +8,15 @@ import com.example.demo.ch7.entity.BaseEntity;
 import com.example.demo.ch8.entity.Address;
 import com.example.demo.ch8.entity.Period;
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.*;
 
 @Entity
 @Table(name = "MEMBER")
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Member {
